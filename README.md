@@ -48,38 +48,5 @@ The methodologies adopted in this project are:
  Data Validation: The code includes data validation checks, such as checking for valid product IDs and quantities, to ensure that the system operates correctly.
  Transaction Management: The system implements transaction management, where multiple operations are grouped together as a single unit of work, ensuring data consistency and integrity.
 
-Coding Examples
-1. Application Initialization and GUI Setup
-class Application:
-def init (self, master):
-self.master = master
-# Frames
-self.left = Frame(master, width=850, height=860, bg='white')
-self.left.pack(side=LEFT)
-self.right = Frame(master, width=680, height=860, bg='lightblue')
-self.right.pack(side=RIGHT) # Components
-self.heading = Label(self.left, text="Santosh Grocery Store", font=('arial 50 bold'), bg="pink")
-self.heading.place(x=100, y=0)
-self.enterid = Label(self.left, text="Enter Product ID", font=('arial 20 bold'), bg='white')
-self.enterid.place(x=0, y=80)
-self.enteride = Entry(self.left, width=20, font=("arial 20 bold"), bg="lightblue")
-self.enteride.place(x=190, y=80) self.enteride.focus()
-GROCERY STORE APPLICATION 50
-CHETANA BCA COLLEGE
-self.search_btn = Button(self.left, text="Search", width=20, height=2, bg='red', command=self.ajax)
-self.search_btn.place(x=350, y=120) # Product Details
-self.productname = Label(self.left, text=" ", font=('arial 25 bold'), bg='white', fg='orange')
-self.productname.place(x=0, y=200)
-self.ppricename = Label(self.left, text=" ", font=('arial 25 bold'), bg='white', fg='orange')
-self.ppricename.place(x=0, y=240)
-self.pstock = Label(self.left, text=" ", font=('arial
-25 bold'), bg='white', fg='orange') self.pstock.place(x=0, y=280)
-2. Handling Product Search
-def ajax(self, master=None, event=None): try:
-self.get_id = int(self.enteride.get()) if self.get_id < 0:
-tkinter.messagebox.showerror("Error", "Please enter a valid / positive product ID")
-except ValueError:
-tkinter.messagebox.showerror("Error", "Please enter a valid product ID (integer only)")
-
 
  
